@@ -1,10 +1,8 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 import './index.css'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+const title = React.createElement("h1", null, "Hello, World!");
+const link = React.createElement("a", { href : "//react.dev"}, "Read more");
+const group = React.createElement(React.Fragment, null, title, link);
+ReactDOM.createRoot(document.getElementById('root')).render(group);
